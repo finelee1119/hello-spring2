@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>숫자야구 게임</title>
+</head>
+<body>
+<h1>숫자야구 게임</h1>
+<p th:text="${message}"></p>
+<form method="post" th:action="@{/baseball/guess}">
+  <input type="number" name="guess[0]" min="0" max="9" required>
+  <input type="number" name="guess[1]" min="0" max="9" required>
+  <input type="number" name="guess[2]" min="0" max="9" required>
+  <button type="submit">확인</button>
+</form>
+</body>
+</html>
